@@ -12,6 +12,7 @@ body {
 	padding-top: 30px;
 	background-size: 100%;
 	font-family: 'Josefin Slab', serif;
+	color: #fafafa;
 }
 
 a {
@@ -142,6 +143,7 @@ color: #2f2f2f;
 
 .timer-countdown {
 	font-size: 100px;
+	color: #fafafa;
 }
 
 .work-time-number {
