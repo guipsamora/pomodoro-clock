@@ -1,8 +1,9 @@
 $(document).ready(function(){
 //Göra så att tidnedränkningen är centrerad, och att work-time försvinner när paus-time tar över.
 //Fixat till modal.
+//
 
-	var workTime = 2;
+	var workTime = 1;
 
 	$("#work-time").text(workTime + " min");
 	$("#workTimeMinus").click(function(){
@@ -17,6 +18,8 @@ $(document).ready(function(){
 		$("#work-time").text(workTime + " min");
 	});
 
+
+
 $("#start").click(function(){
 var display = $("#display-time")
 startTimer(workTime*60, display);
@@ -26,23 +29,23 @@ function startTimer(duration, display) {
   var timer = duration;
   var minutes;
   var seconds;
-console.log(seconds);
-    var workTimeInSec = workTime * 60;
-  var startInterval = setInterval(function() {
-
+  var workTimeInSec = workTime * 60;
+  
+    var startInterval = setInterval(function() {
     minutes = parseInt(timer / 60, 10)
     seconds = parseInt(timer % 60, 10);
-
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
-
     display.text(minutes + ":" + seconds);
-   procentOfTime(workTimeInSec, timer);
-   console.log(workTimeInSec);
-   console.log(timer);
+    procentOfTime(workTimeInSec, timer);
+    $("#reset").click(function(){
+    $("#work-time").text(workTime + " min");
+    clearInterval(startInterval);
+  });
     if (--timer < 0) {
       clearInterval(startInterval);
       $("#sound").html("<audio controls autoplay><source src=\"alarm.mp3\" type=\"audio/mpeg\"></audio>");
+      $(".timer-countdown").css("display", "none");
       var displayPaus = $("#ny-paus");
       startPausTimer(pausTime * 60, displayPaus);
     }
@@ -87,10 +90,7 @@ $("#start-paus").click(function(){
       if (minutes < 10){
         minutes = "0" + minutes;
       }
-      console.log(timer);
       procentOfTime(pausTimeInSec, timer);
-
-
       display.text(minutes + ":" + seconds);
 
 if (--timer < 0) {
@@ -103,8 +103,6 @@ if (--timer < 0) {
 
 function procentOfTime(total, nuvarande){
   var procent = nuvarande / total;
-
-  console.log(procent);
   if (procent < 0.9){
     $("#procent-10").addClass("procent-10");
   }
