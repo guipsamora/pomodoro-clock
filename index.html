@@ -1,0 +1,123 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pomodoro-clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900,300' rel='stylesheet' type='text/css'>
+</head>
+<body id="background" class="background-color">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="work-div">
+                            <div class="row">
+                                <div class="col-md-8">
+                            <h1>Work time</h1>
+                            
+                            <button class="knapp" id="workTimeMinus">-</button>
+                            <button class="knapp" id="workTimePlus">+</button>
+                            <br>
+                            <div class="start-button" id="start">Start the count</div>
+                                </div>
+                            <div class="col-md-4">
+                                <div class="Aligner">
+    <div id="work-time" class="text-center work-time-number"></div>
+</div>
+
+
+                            </div>
+                            </div><!-- row -->
+                        </div>
+                        <div class="paus-div">
+                            <div class="row">
+                                <div class="col-md-8">
+                            <h1>Paus time</h1>
+                            <button class="knapp" id="pausTimeMinus">-</button>
+                            <button class="knapp" id="pausTimePlus">+</button>
+                            <br>
+                        </div><!-- col-md-8 -->
+                            <div class="col-md-4">
+                                <div class="Aligner">
+                            <div id="paus-time" class="text-center work-time-number"></div>
+                        </div>
+                            <div id="work"></div>
+                            <div id="sound"></div>
+                        </div><!--col-md-4-->
+                    </div><!-- row -->
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div id="alarm" class="alarm">
+                            
+                            <div id="display-time" class="text-center timer-countdown">
+                            </div>
+                            <p id="ny-paus" class="text-center timer-countdown"></p>
+                        
+                    </div><!-- alarm -->
+                    </div><!-- col-md-4 -->
+                </div> <!-- row -->
+                <div class="contact text-center">
+                    <a href="#openModal">About</a>
+                </div>
+            </div>
+
+
+
+<div id="openModal" class="modalDialog">
+    
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>The Pomodoro Clock</h2>
+        <p>This is a <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">pomodoro-clock</a>. Used for productivity. I guess it should start at 25 min. But you can go ahead and set it to whatever you like.</p> 
+        <br><p>But I guess it could also be used as an alarm-clock when you are making a lasanga, and dont feel like getting away from the computer to check on the owen.</p>
+        <br>
+        <p>By <a href="https://xapax.github.io">xapax</a>.</p>
+    </div>
+
+</div>
+
+<div class="timer-progress">
+<div id="procent-10">
+</div>
+<div id="procent-20">
+</div>
+<div id="procent-30">
+</div>
+<div id="procent-40">
+</div>
+<div id="procent-50">
+</div>
+<div id="procent-60">
+</div>
+<div id="procent-70">
+</div>
+<div id="procent-80">
+</div>
+<div id="procent-90">
+</div>
+<div id="procent-100">
+</div>
+</div>
+
+        </div> <!-- /container -->        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+    </html>
