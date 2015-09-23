@@ -3,7 +3,7 @@ $(document).ready(function(){
 //Fixat till modal.
 //
 
-	var workTime = 1;
+	var workTime = 25;
 
 	$("#work-time").text(workTime + " min");
 	$("#workTimeMinus").click(function(){
