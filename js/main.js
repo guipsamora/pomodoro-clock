@@ -95,7 +95,7 @@ $("#start-paus").click(function(){
 
 if (--timer < 0) {
       clearInterval(startPausInterval);
-      $("#alarm").html("<h1>Ya basta, ahora tienes que trabajar</h1>");
+      $("#alarm").html("<h1>Refresh and get<br>to work again</h1>");
     }
 
     }, 1000);
