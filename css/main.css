@@ -96,7 +96,7 @@ color: #2f2f2f;
 
 .paus-div {
 	width: 100% 400px;
-	height: 200px;
+	height: 100%;
 	background-color: #5A58A3;
 	padding: 20px;
 	border-radius: 5px;
@@ -130,13 +130,20 @@ color: #2f2f2f;
 }
 
 .alarm {
-	width: 400px;
-	height: 400px;
+	width: 300px;
+	height: 300px;
 	border-radius: 100%;
 	background-color: #D14550;
-	padding-left: 50px;
 	margin-top: 50px;
 	box-shadow: 10px 10px 2px rgba(177,177,177, 0.5);
+		display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+	justify-content: center;
 }
 
 .alarm2 {
@@ -157,9 +164,21 @@ color: #2f2f2f;
 font-size: 40px;
 }
 
-.Alignera {
-margin: 100% auto;
+.flexcontainer {
+width: 100%;
+height: 100px;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+	justify-content: center;
+
 }
+
+
 
 .wrapper {
 	margin: 100% auto;
